@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class LinkedList {
+public:
+    int data;
+    LinkedList* next;
+};
+
+int main()
+{
+    // creating a linked list
+    class LinkedList* node1 = new LinkedList();
+    node1->data = 1;
+
+    class LinkedList* node2 = new LinkedList();
+    node2->data = 2;
+
+    class LinkedList* node3 = new LinkedList();
+    node3->data = 3;
+
+    // linking all the nodes
+
+    node1->next = node2;
+    node2->next = node3;
+    node3->next = NULL;
+
+    // printing value of linked list
+    cout << node1->data << " " << node2->data << " "
+         << node3->data << endl;
+
+    return 0;
+}
